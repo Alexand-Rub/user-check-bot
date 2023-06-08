@@ -26,7 +26,7 @@ async def cmd_participation(message: Message):
 @router.callback_query(ChatsCallbackFactory.filter())
 async def get_chat(callback: CallbackQuery, callback_data: ChatsCallbackFactory, state: FSMContext):
     await state.update_data(chat_id=callback_data.chat_id)
-    await callback.message.answer(text='Загрузите чат список пользователей')
+    await callback.message.answer(text='Загрузите список пользователей')
     await state.set_state(UserList.download)
     await callback.answer()
 

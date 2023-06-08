@@ -14,7 +14,7 @@ async def cmd_start(message: Message):
         text='Бот готов к работе!'
     )
     await message.answer(
-        text='/chats - Показать список чатов\n/participation - Проверить наличие пользователей'
+        text='/help - помощь по командам\n/chats - Показать список чатов\n/participation - Проверить наличие пользователей'
     )
 
 
